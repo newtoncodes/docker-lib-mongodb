@@ -1,2 +1,3 @@
-# docker-lib-mongodb
-Docker mongodb image based on ubuntu.
+# MongoDB on ubuntu docker image
+
+Basic MongoDB image, no additional functionality. 
