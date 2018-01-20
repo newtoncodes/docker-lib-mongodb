@@ -13,9 +13,7 @@ RUN rm -rf /var/lib/mongodb && mkdir -p /var/lib/mongodb /var/run/mongod
 RUN mkdir -p /var/lib/mongodb
 RUN chown -R mongodb:mongodb /var/lib/mongodb /var/log/mongodb /var/run/mongod && chmod 777 /var/run/mongod
 
-
-#COPY mongodbd.cnf /etc/mongodb/mongodb.conf.d/mongodbd.cnf
-
+COPY mongod.conf /etc/mongod.conf
 
 COPY entrypoint.sh /usr/bin/entrypoint
 RUN chmod +x /usr/bin/entrypoint
